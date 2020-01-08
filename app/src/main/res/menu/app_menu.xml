@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/grey"
+        android:title="Grey image" >
+    </item>
+    <item android:id="@+id/colored1"
+        android:title="Colored image (1)" >
+    </item>
+    <item android:id="@+id/colored2"
+        android:title="Colored image (2)" >
+    </item>
+
+</menu>

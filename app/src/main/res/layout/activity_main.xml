@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="360"
+        android:progress="10"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.768"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/size"
+        android:layout_width="161dp"
+        android:layout_height="76dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/seekBar"
+        app:layout_constraintTop_toTopOf="@+id/original1"
+        app:layout_constraintVertical_bias="0.786"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="100dp"
+        android:layout_height="70dp"
+        android:text="Reset"
+        app:layout_constraintBottom_toTopOf="@+id/flou"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/saturation" />
+
+    <Button
+        android:id="@+id/grey"
+        android:layout_width="100dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="28dp"
+        android:text="Grey"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/filtre"
+        android:layout_width="100dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="28dp"
+        android:text="Colored filter"
+        app:layout_constraintBottom_toTopOf="@+id/grey"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/saturation"
+        android:layout_width="100dp"
+        android:layout_height="70dp"
+        android:text="Saturation"
+        app:layout_constraintBottom_toTopOf="@+id/contraste"
+        app:layout_constraintStart_toEndOf="@+id/filtre" />
+
+    <Button
+        android:id="@+id/contraste"
+        android:layout_width="100dp"
+        android:layout_height="70dp"
+        android:text="Contrast augmentation"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/grey" />
+
+    <Button
+        android:id="@+id/flou"
+        android:layout_width="100dp"
+        android:layout_height="70dp"
+        android:text="Gaussian blur"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/contraste" />
+
+    <ImageView
+        android:id="@+id/modified1"
+        android:layout_width="385dp"
+        android:layout_height="246dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.615"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/original1" />
+
+    <ImageView
+        android:id="@+id/original1"
+        android:layout_width="385dp"
+        android:layout_height="246dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.615"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
